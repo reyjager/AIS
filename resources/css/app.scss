@@ -82,10 +82,11 @@ $primary: #123456;
 }
 
 /* Smooth dropdown animation */
-.dropdown-menu {
+.dropdown-menu.show {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+
   
 }
 
@@ -93,3 +94,19 @@ $primary: #123456;
   opacity: 1;
   visibility: visible;
 }
+.list-unstyled {
+    padding-left: 15px;
+
+    li{
+    &:hover{
+         background-color: #466481;
+    }
+    a{
+        margin: 2px;
+    }
+}
+}
+.profile li{
+    padding: 0;
+}
+

@@ -6,7 +6,7 @@
     <!-- End Profile Image Icon -->
 
     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li class="dropdown-header">
+        <li class="dropdown-header px-3">
             <h6>{{ auth()->user()->name() }}</h6>
             <span>Web Designer</span>
         </li>

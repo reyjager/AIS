@@ -9,7 +9,7 @@
         @if ($item['submenu'])
             <li class="mb-2">
                 <a href="{{ $item['url'] }}" 
-                   class="d-flex align-items-center text-decoration-none text-white {{ request()->is($item['active']) ? 'active' : '' }}"
+                   class="d-flex align-items-center text-decoration-none text-white p-2 {{ request()->is($item['active']) ? 'active' : '' }}"
                    data-bs-toggle="collapse"
                    aria-expanded="{{ request()->is($item['active']) ? 'true' : 'false' }}">
                     <i class="bi {{ $item['icon'] }} pe-2"></i> 
@@ -22,7 +22,7 @@
                         @if (!isset($subItem['show']) || $subItem['show'])
                             <li>
                                 <a href="{{ $subItem['url'] }}" 
-                                   class="text-decoration-none text-white {{ request()->is($subItem['active']) ? 'active' : '' }}">
+                                   class="text-decoration-none text-white py-3 {{ request()->is($subItem['active']) ? 'active' : '' }}">
                                     @if (isset($subItem['icon']))
                                         <i class="{{ $subItem['icon'] }} pe-2"></i>
                                     @endif
@@ -34,9 +34,9 @@
                 </ul>
             </li>
         @else
-            <li class="mb-3">
+            <li class="mb-2">
                 <a href="{{ $item['url'] }}" 
-                   class="d-flex align-items-center text-decoration-none text-white {{ request()->is($item['active']) ? 'active' : '' }}">
+                   class="d-flex align-items-center text-decoration-none text-white p-2 {{ request()->is($item['active']) ? 'active' : '' }}">
                     <i class="bi {{ $item['icon'] }} pe-2"></i> 
                     {{ $item['title'] }}
                 </a>
