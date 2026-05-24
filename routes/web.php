@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +37,9 @@ Route::controller(AuthController::class)->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/services', [ServiceController::class, 'index'])->name('service');
+    Route::get('/create-user', [UserController::class, 'create'])->name('create-user');
+    Route::post('/create-user', [UserController::class, 'store'])->name('create-user.store');
     
     // Additional authenticated routes can be added here
 });

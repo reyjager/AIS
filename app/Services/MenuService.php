@@ -38,6 +38,12 @@ class MenuService
                         'icon' => 'fas fa-cogs',
                         'active' => ['admin*'],
                         'show' => Auth::user()->isAdmin ?? false
+                    ],
+                    [
+                        'title' => 'Create User',
+                        'url' => '/create-user',
+                        'active' => ['create-user'],
+                        
                     ]
                 ]
             ],

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div>
         <!-- Profile Content -->
         <h1>Your Profile</h1>
@@ -11,4 +12,5 @@
         <p>{{ $isAdmin ? 'Admin' : 'Not Admin' }}</p>
 
     </div>
+
 @endsection
